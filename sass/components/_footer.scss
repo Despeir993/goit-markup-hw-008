@@ -1,0 +1,159 @@
+/*Нижний колонтитул*/
+.footer {
+  background-color: $back-color-ef;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-style: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $white-color;
+
+    @media screen and (max-width: 1199px) {
+      letter-spacing: 0.03em;
+    }
+  }
+}
+
+.connect-footer {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+  }
+}
+
+.adress {
+  padding: 60px 0px;
+
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.container--footer {
+  display: flex;
+
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 767px) {
+    align-items: center;
+  }
+}
+
+.content {
+  padding-top: 72px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 65px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer-adress {
+  list-style-type: none;
+  padding-top: 20px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $white-color;
+  }
+
+  &__telmail {
+    color: $telmail;
+  }
+
+  &__link:hover {
+    color: $hover-color;
+  }
+}
+
+.footer-connect {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 1199px) {
+    align-items: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 72px;
+    margin-left: 93px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+    }
+  }
+
+  &__field:focus-within &__input {
+    outline: 0;
+    border-color: $hover-color;
+  }
+
+  &__input {
+    display: flex;
+    height: 50px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-bottom: 0px;
+    }
+
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    background-color: $back-color-ef;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
