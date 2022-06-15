@@ -1,19 +1,21 @@
 .logo {
-  @media screen and (min-width: 1200px) {
-    margin-right: 93px;
-    font-size: 26px;
-    line-height: 1.19;
-    margin-bottom: 25px;
-    margin-top: 25px;
-  }
-
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  text-decoration: none;
-  font-size: 24px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  color: $black-color;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-color);
+  margin-right: 93px;
+  position: relative;
+
+
+}
+.logo--position {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo__dark--head {
+  color: var(--primary-text-color);
 }
 
 .logo-color {
@@ -22,4 +24,9 @@
 
 .logo-color2 {
   color: $white-color;
+}
+.logo--pad {
+  @include mq (mobile-only){
+    padding: 16px;
+  }
 }

@@ -4,7 +4,9 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    margin: 0;
+      padding: 0;
+      box-sizing: border-box;
 }
 
 img {
@@ -21,9 +23,10 @@ img {
 }
 
 .container {
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 
   @media screen and (min-width: 480px) {
     width: 480px;
@@ -40,6 +43,7 @@ img {
 
 .section {
   padding-top: 60px;
+  padding-bottom: 60px;
 
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
@@ -77,4 +81,25 @@ img {
   @media screen and (min-width: 1200px) {
     font-size: 36px;
   }
+}
+.section__title {
+  @include mq(not-desktop) {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.43;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  color: var(--primary-text-color);
 }

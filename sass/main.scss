@@ -1,9 +1,10 @@
 @import './utils/variables';
 @import './utils/reset';
+@import './utils/mixins';
 @import './components/base';
 @import './components/logo';
 @import './components/button';
-@import './components/social-icon';
+
 @import './components/header';
 @import './components/burger-menu';
 @import './components/hero';
@@ -14,3 +15,4 @@
 @import './components/clients';
 @import './components/portfolio';
 @import './components/footer';
+@import './components/social-icon';

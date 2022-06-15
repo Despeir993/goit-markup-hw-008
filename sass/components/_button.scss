@@ -29,11 +29,11 @@
   display: flex;
   padding: 10px 62px 10px 29px;
   margin-left: 12px;
-
-  @media screen and (max-width: 1199px) {
-    margin-left: 0px;
-    margin-bottom: 60px;
+  @include mq (not-desktop) {
+    margin-left: 0;
   }
+
+
 }
 
 .button-footer-icon {
