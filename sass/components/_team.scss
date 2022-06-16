@@ -1,6 +1,11 @@
 .team {
+      display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 30px;
   @include mq(mobile) {
-    display: block;
+   // display: block;
   }
 
   @include mq(tablet) {
@@ -20,45 +25,9 @@
 }
 
 .team__item {
-
   text-align: center;
-
-  @include mq(mobile) {
-    margin-bottom: 30px;
-
   }
 
-  @include mq(tablet) {
-    margin-bottom: 30px;
-
-    &:nth-child(odd) {
-      margin-right: 30px;
-     
-    }
-         &:nth-last-child(-n + 2) {
-           margin-bottom: 0;
-         }
-
-    text-align: center;
-  }
-
-  @include mq(desktop) {
-    width: 270px;
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
-
-    &:nth-last-child(-n + 4) {
-      margin-bottom: 0;
-    }
-
-    text-align: center;
-  }
 
   .team__title {
     margin-bottom: 10px;
@@ -113,4 +82,3 @@
       fill: var(--spec-color);
     }
   }
-}

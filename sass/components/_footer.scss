@@ -28,7 +28,12 @@
 }
 
 .adress {
-
+@include mq (mobile-only) {
+  margin-bottom: 60px;
+}
+@include mq (tablet) {
+  margin-bottom: 60px;
+}
 
   @media screen and (max-width: 1199px) {
     display: flex;
@@ -69,7 +74,7 @@
 .footer-adress {
   list-style-type: none;
   margin-top: 20px;
-  margin-bottom: 60px;
+
 
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
