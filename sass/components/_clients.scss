@@ -1,6 +1,13 @@
 .clients__list {
+    @include mq (mobile-only) {
+        justify-content: center;
+        align-items: center;
+       grid-gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
+       }
 
-  @include mq (not-desktop) {
+  @include mq (tablet-only) {
     justify-content: center;
       align-items: center;
       grid-gap: 30px;
@@ -12,6 +19,7 @@
         justify-content: space-between;
   }
 }
+
 
 .clients__link {
   display: flex;
