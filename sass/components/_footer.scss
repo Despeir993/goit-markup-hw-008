@@ -24,6 +24,11 @@
     flex-direction: row;
     align-content: center;
     justify-content: space-around;
+    align-items: baseline;
+    margin-bottom: 60px;
+  }
+  @include mq (desktop) {
+    margin-bottom: 0;
   }
 }
 
@@ -31,8 +36,9 @@
 @include mq (mobile-only) {
   margin-bottom: 60px;
 }
-@include mq (tablet) {
-  margin-bottom: 60px;
+@include mq (desktop) {
+    margin-right: 70px;
+ 
 }
 
   @media screen and (max-width: 1199px) {
@@ -77,7 +83,7 @@
 
 
   @media screen and (min-width: 1200px) {
-    margin-right: 70px;
+  
   }
 
   @media screen and (max-width: 1199px) {

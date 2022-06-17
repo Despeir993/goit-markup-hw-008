@@ -30,8 +30,7 @@
   list-style-type: none;
      justify-content: center;
     gap: 30px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+
 
     @media screen and (min-width: 1200px) {
       padding-top: 94px;
@@ -45,9 +44,10 @@
   }
 
   &__item {
+
     @media screen and (max-width: 767px) {
       max-width: 450px;
- 
+
         }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -70,6 +70,8 @@
     height: 120px;
     margin-bottom: 30px;
     background-color: $button-back;
+    
+      border-radius: 4px;
   }
 
   &__title {
@@ -94,7 +96,12 @@
     letter-spacing: 0.03em;
   }
 }
-
+.feature__item:not(:last-child) {
+  @include mq (mobile-only) {
+    margin-bottom: 30px;
+    
+  }
+}
 .overlay {
   background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/img_overlay.jpg);

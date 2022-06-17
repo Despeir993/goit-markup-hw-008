@@ -1,9 +1,8 @@
 .btn-menu {
-  position: absolute;
   display: inline-flex;
-  margin: 0;
+margin-left: auto;
   right: 0;
-  top: 10px;
+  top: 0px;
 
   border: none;
   background-color: transparent;
@@ -36,7 +35,8 @@
 
 
 .mobile-menu {
-
+display: flex;
+flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
@@ -53,15 +53,15 @@
 }
 
 .mobile-menu-contacts {
-  margin-top: 180px;
-  margin-bottom: 64px;
+margin-top: auto;
 
 }
 
 .mobile-menu-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+margin-top: 64px;
+ display: flex;
+ align-items: center;
+
 }
 
 .mobile-menu-link {
@@ -71,19 +71,12 @@
   letter-spacing: 0.02em;
   color: $hover-color;
 
-  .mobile-menu-item:not(:last-child) & {
-    padding-right: 10px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-  }
+  
 }
-
-.mobile-menu-item {
+.mobile-menu-item:not(:last-child) {
   margin-right: 10px;
-  margin-bottom: 32px;
-
-  &:last-child {
-    margin-right: 0;
-  }
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  flex-grow: 1;
 }
 
 .mobile-menu-nav {
@@ -95,13 +88,15 @@
 }
 
 .mobile-menu-nav-item {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 
   &:last-child {
-    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
-
+.nav:not(:last-child) {
+  margin-bottom: 30px;
+}
 .mobile-menu-font {
   font-weight: 500;
   font-size: 24px;

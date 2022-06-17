@@ -7,7 +7,9 @@
   margin-right: 93px;
   position: relative;
 
-
+@include mq (mobile-only) {
+  margin-right: 0;
+}
 }
 .logo--position {
   margin-left: auto;
@@ -25,8 +27,8 @@
 .logo-color2 {
   color: $white-color;
 }
+
 .logo--pad {
-  @include mq (mobile-only){
-    padding: 16px;
-  }
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
