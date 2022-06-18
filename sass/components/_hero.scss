@@ -27,38 +27,26 @@
 }
 
 .feature {
-  list-style-type: none;
-     justify-content: center;
-    gap: 30px;
+   
+  @include mq(mobile-only) {
+   display: block;
+  }
 
-
-    @media screen and (min-width: 1200px) {
-      padding-top: 94px;
-      padding-bottom: 94px;
-    }
-  
-  @media screen and (min-width: 768px) {
+  @include mq(tablet-only) {
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: center;
+    margin: -15px;
   }
 
-  &__item {
-
-    @media screen and (max-width: 767px) {
-      max-width: 450px;
-
-        }
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      max-width: 354px;
- 
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: 270px;
-    }
+  @include mq(desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
   }
+
+  
 
 
 
@@ -96,12 +84,31 @@
     letter-spacing: 0.03em;
   }
 }
-.feature__item:not(:last-child) {
-  @include mq (mobile-only) {
-    margin-bottom: 30px;
-    
-  }
+.feature__item {
+  text-align: center;
+  
+    @include mq (mobile-only) {
+      margin-bottom: 30px;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    @include mq (tablet-only) {
+      width: calc((100% - 2 * 30px)/2);
+      margin: 15px;
+    }
+  
+    @include mq (desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    }
 }
+    
+  
+
 .overlay {
   background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/img_overlay.jpg);

@@ -12,8 +12,9 @@
 }
 }
 .logo--position {
-  margin-left: auto;
-  margin-right: auto;
+@include mq (tablet-only) {
+    margin-right: 0;
+  }
 }
 
 .logo__dark--head {
@@ -29,6 +30,8 @@
 }
 
 .logo--pad {
-  padding-top: 16px;
-  padding-bottom: 16px;
+@include mq (mobile-only) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 }

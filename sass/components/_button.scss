@@ -24,6 +24,9 @@
 
 .footer_button {
   position: relative;
+      @include mq (not-desktop) {
+        margin-top: 20px;
+      }
 }
 .button-footer {
   display: flex;

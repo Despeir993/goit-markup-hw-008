@@ -1,22 +1,21 @@
 .team {
-      display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        grid-gap: 30px;
-  @include mq(mobile) {
-   // display: block;
+      
+    
+  @include mq(mobile-only) {
+   display: block;
   }
 
-  @include mq(tablet) {
+  @include mq(tablet-only) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: -15px;
   }
 
   @include mq(desktop) {
     display: flex;
-    flex-wrap: wrap;
+justify-content: center;
+align-items: center;
   }
 }
 
@@ -26,6 +25,21 @@
 
 .team__item {
   text-align: center;
+  @include mq (mobile-only) {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include mq (tablet-only) {
+    width: calc((100% - 2 * 30px)/2);
+    margin: 15px;
+  }
+  @include mq (desktop) {
+&:not(:last-child) {
+  margin-right: 30px;
+}
+  }
   }
 
 

@@ -1,21 +1,36 @@
 .clients__list {
+@include mq (mobile-only) {
+    display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+}
+@include mq (tablet-only) {
+    display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+}
+@include mq (desktop) {
   display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+  align-items: center;
+  justify-content: center;
+}
 }
 .clients__item {
       height: 92px;
-        margin: 15px;
+     
   @include mq (mobile-only) {
-  
+  margin: 15px;
       flex-basis: calc((100% - 60px)/2);
   }
      @include mq (tablet-only) {
-      
+      margin: 15px;
 flex-basis: calc((100% - 90px)/3);
      }
      @include mq (desktop) {
-          flex-basis: calc((100% - 180px)/6);
+width: 100%;
+&:not(:last-child){
+  margin-right: 30px;
+}
      }
 }
 
