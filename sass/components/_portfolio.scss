@@ -67,11 +67,9 @@
 }
 
 .project-group {
-       margin: -15px;
+     
     
-      @include mq(mobile-only) {
-        display: block;
-      }
+ 
     
       @include mq(tablet-only) {
         display: flex;
@@ -98,12 +96,12 @@
     }
   }
  @include mq (tablet-only) {
-    width: calc((100% - 2 * 30px)/2);
+    width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
   @include mq (desktop) {
         margin: 15px;
-          flex-basis: calc((100% - 90px)/3);
+          flex-basis: calc((100% - 90px) / 3);
   }
 
 }
@@ -114,7 +112,7 @@
 
 .proj-descr {
    flex-grow: 1;
-   display: block;
+
    padding-top: 20px;
     padding-bottom: 20px;
    padding-left: 24px;
